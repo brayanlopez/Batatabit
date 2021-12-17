@@ -1,0 +1,16 @@
+{
+  "name": "batatabit",
+  "version": "1.0.0",
+  "description": "A landing page of a bitcoin comerce. Based in a course from platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS"
+  ],
+  "author": "Brayan Lopez <balg.lg55@gmail.com>",
+  "license": "ISC"
+}
