@@ -36,14 +36,95 @@
           </p>
         </div>
         <section class="main-tables-container">
-          <div></div>
-          <table></table>
+          <div class="main-currency-table">
+            <p class="currency-table--title">Monedas</p>
+            <div class="currency-table--container">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="table__top-left">Bitcoin</td>
+                    <td class="table__top-right table__right">
+                      $1.96 <span class="icon currency-down"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Ethereum</td>
+                    <td class="table__right">
+                      $0.07 <span class="icon currency-up"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Ripple</td>
+                    <td class="table__right">
+                      $2.15 <span class="icon currency-down"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table__bottom-left">Stellar</td>
+                    <td class="table__bottom-right table__right">
+                      $4.96 <span class="icon currency-down"></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="currency-table--date">
+              <p><b>Actualizado</b>: 19 Julio 23:45</p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="main-product-detail">
+        <span class="product-detail--batata-logo"></span>
+        <div class="product-detail--title">
+          <h2>Creamos un producto sin comparación.</h2>
+          <p>Confiable y diseñado para su uso diario.</p>
+        </div>
+        <section id="cards-container" class="product-cards--container">
+          <!-- <article class="product-detail--card">
+            <span class="clock"></span>
+            <p class="product--card-title"></p>
+            <p class="product--card-title"></p>
+          </article> -->
         </section>
       </section>
       <section></section>
       <section></section>
-      <section></section>
     </main>
     <footer></footer>
+    <script>
+      let productCards = [
+        {
+          title: "Tiempo real",
+          description:
+            "Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.",
+          icon: "clock",
+        },
+        {
+          title: "No hay tasas escondidas",
+          description:
+            "Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.",
+          icon: "eye",
+        },
+        {
+          title: "Compara monedas",
+          description:
+            "No más rumores, con Babtabit sabrás el valor real de cada moneda en el mercado actual.",
+          icon: "dollar-sign",
+        },
+      ];
+      let cardsContainer = document.getElementById("cards-container");
+      console.log(cardsContainer);
+      productCards.forEach((item) => {
+        let card = `
+        <article class="product-detail--card">
+            <span class="icon ${item.icon}"></span>
+            <p class="product--card-title">${item.title}</p>
+            <p class="product--card-body">${item.description}</p>
+          </article>
+        `;
+        cardsContainer.innerHTML += card;
+      });
+    </script>
   </body>
 </html>
