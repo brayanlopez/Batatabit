@@ -88,10 +88,23 @@
           </article> -->
         </section>
       </section>
-      <section></section>
-      <section></section>
+      <section class="bitcoin-img-container">
+        <h2>Conocelo hoy</h2>
+      </section>
+      <section>
+        <h2>Escoge el plan que mejor se ajuste a ti.</h2>
+        <p>Cualquier plan te da acceso completo a nuestra plataforma.</p>
+        <div></div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <ul>
+        <li><a href="">Linkedin</a></li>
+        <li><a href="">Crunchbase</a></li>
+        <li><a href="">Hackernews</a></li>
+      </ul>
+      <span></span>
+    </footer>
     <script>
       let productCards = [
         {
@@ -112,9 +125,15 @@
             "No más rumores, con Babtabit sabrás el valor real de cada moneda en el mercado actual.",
           icon: "dollar-sign",
         },
+        {
+          title: "Información confiable",
+          description:
+            "Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.",
+          icon: "check-circle",
+        },
       ];
+      let styles = document.styleSheets[0];
       let cardsContainer = document.getElementById("cards-container");
-      console.log(cardsContainer);
       productCards.forEach((item) => {
         let card = `
         <article class="product-detail--card">
@@ -124,7 +143,13 @@
           </article>
         `;
         cardsContainer.innerHTML += card;
+        styles.insertRule(
+          `.product-detail--card .${item.icon}{
+            background-image: url(../assets/icons/${item.icon}.svg);
+          }`
+        );
       });
+      console.log(styles);
     </script>
   </body>
 </html>
