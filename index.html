@@ -10,6 +10,11 @@
     href=“https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap”
     rel=“stylesheet”>
     <link rel="stylesheet" href="src/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="src/styles/table.css"
+      media="(min-width: 930px)"
+    />
   </head>
   <body>
     <header>
@@ -42,8 +47,8 @@
               <table>
                 <tbody>
                   <tr>
-                    <td class="table__top-left">Bitcoin</td>
-                    <td class="table__top-right table__right">
+                    <td>Bitcoin</td>
+                    <td class="table__right">
                       $1.96 <span class="icon currency-down"></span>
                     </td>
                   </tr>
@@ -60,8 +65,8 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="table__bottom-left">Stellar</td>
-                    <td class="table__bottom-right table__right">
+                    <td>Stellar</td>
+                    <td class="table__right">
                       $4.96 <span class="icon currency-down"></span>
                     </td>
                   </tr>
@@ -69,6 +74,34 @@
               </table>
             </div>
             <div class="currency-table--date">
+              <p><b>Actualizado</b>: 19 Julio 23:45</p>
+            </div>
+          </div>
+          <div class="main-currency-table">
+            <p class="currency-table--title commision">Comisiones</p>
+            <div class="currency-table--container">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Bitrade</td>
+                    <td class="table__right">$12.96</td>
+                  </tr>
+                  <tr>
+                    <td>Bitpreco</td>
+                    <td class="table__right">$13.07</td>
+                  </tr>
+                  <tr>
+                    <td>Novadax</td>
+                    <td class="table__right">$13.15</td>
+                  </tr>
+                  <tr>
+                    <td>Coinext</td>
+                    <td class="table__right">$14.96</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="currency-table--date commision-table--date">
               <p><b>Actualizado</b>: 19 Julio 23:45</p>
             </div>
           </div>
@@ -96,26 +129,61 @@
           <h2>Escoge el plan que mejor se ajuste a ti.</h2>
           <p>Cualquier plan te da acceso completo a nuestra plataforma.</p>
         </div>
-        <section class="plans-containe--slider">
-          <article class="plans-containe--card">
-            <p>Recomendado</p>
-            <div>
-              <h3>Pago anual</h3>
-              <p><span>$</span>99</p>
-              <p>* Ahorra $129 comparado al plan mensual.</p>
-              <button>Escoger este <span></span></button>
+        <section class="plans-container--slider">
+          <article class="plans-container--card">
+            <div class="plan-info-container">
+              <h3 class="plan-card--title">Pago mensual</h3>
+              <p class="plan-card--price"><span>$</span>10</p>
+              <p class="plan-card--saving">
+                * Ahorra $129 comparado al plan mensual.
+              </p>
+              <button class="plan-card--ca">
+                Escoger este <span class="icon icon-right-arrow"></span>
+              </button>
+            </div>
+          </article>
+          <article class="plans-container--card">
+            <p class="recommended">Recomendado</p>
+            <div class="plan-info-container">
+              <h3 class="plan-card--title">Pago anual</h3>
+              <p class="plan-card--price"><span>$</span>99</p>
+              <p class="plan-card--saving">
+                * Ahorra $129 comparado al plan mensual.
+              </p>
+              <button class="plan-card--ca">
+                Escoger este <span class="icon icon-right-arrow"></span>
+              </button>
+            </div>
+          </article>
+          <article class="plans-container--card">
+            <div class="plan-info-container">
+              <h3 class="plan-card--title">Pago empresarial</h3>
+              <p class="plan-card--price"><span>$</span>199</p>
+              <p class="plan-card--saving">
+                * Ahorra $129 comparado al plan mensual.
+              </p>
+              <button class="plan-card--ca">
+                Escoger este <span class="icon icon-right-arrow"></span>
+              </button>
             </div>
           </article>
         </section>
       </section>
     </main>
-    <footer>
-      <ul>
-        <li><a href="">Linkedin</a></li>
-        <li><a href="">Crunchbase</a></li>
-        <li><a href="">Hackernews</a></li>
-      </ul>
-      <span></span>
+    <footer class="footer">
+      <section class="left">
+        <ul>
+          <li><a href="#">Linkedin</a></li>
+          <li><a href="#">Crunchbase</a></li>
+          <li><a href="#">Hackernews</a></li>
+        </ul>
+      </section>
+      <section class="right">
+        <img
+          src="src/assets/img/logo-footer.svg"
+          alt="Logo de batata bit 2020"
+        />
+      </section>
     </footer>
     <script>
       let productCards = [
